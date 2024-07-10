@@ -35,5 +35,11 @@
 
 4. Check this for limit specifiction ![Pagination](resources/pagination.png)
 
+### Editing the Respond
+- In the Transformations window, You can Add or Remove Field.
+- Path in *Removing* is the path of the field you want to remove ex. name
+- Path in *Adding* is the path to the field you want to add ex. name2. Value Should be a string and can be extracted from the data ex. record['col_name']['in_col_name']
+> Hint: the .yml file can accept *'Jinja_script'* ex. ` {% if record['object_story_spec']['video_data'] %} '{{ record['object_story_spec']['video_data']['call_to_action']['value']['link'] }}' {% else %} '{{ record['object_story_spec']['link_data']['link'] }}' {% endif %} `
+
 ## Conclusion
 - Following steps, you will be able to build your first custom connector on Airbyte using Facebook marketing API.
